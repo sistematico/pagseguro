@@ -1,5 +1,9 @@
 # PagSeguro
 
+| PHP | JavaScript |
+| ------------------ | ------------------ |
+| [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sistematico/pagseguro/Deploy%20PHP?label=Github%20Action&logo=github&logoColor=white&style=flat-square)](https://github.com/sistematico/pagseguro/actions?query=workflow%3A%22Deploy+PHP) | [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sistematico/pagseguro/Deploy%20JavaScript?label=Github%20Action&logo=github&logoColor=white&style=flat-square)](https://github.com/sistematico/pagseguro/actions?query=workflow%3A%22Deploy+JavaScript)
+
 Projeto de integração do PagSeguro com o PHP e JavaScript.
 
 ## Ramificações
