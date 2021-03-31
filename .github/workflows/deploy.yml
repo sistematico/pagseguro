@@ -1,4 +1,4 @@
-name: Deploy WebSite
+name: Deploy JavaScript
 
 on: [push]
 
