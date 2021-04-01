@@ -1,5 +1,18 @@
 {
+    "name": "sistematico/pagseguro",
+    "description": "Integração da API do PagSeguro usando PHP",
+    "authors": [
+        {
+            "name": "Lucas Saliés Brum",
+            "email": "lucas@archlinux.com.br"
+        }
+    ],
     "require": {
         "pagseguro/pagseguro-php-sdk": "^4.2"
+    },
+    "autoload":  {
+        "files": [
+            "cfg/config.php"
+        ]
     }
 }

@@ -1,14 +1,17 @@
 <?php
-$url = "https://ws.sandbox.pagseguro.uol.com.br/v2/sessions";
+
+require __DIR__ . '/vendor/autoload.php';
 
 $config = parse_ini_file(".env");
 
 $credenciais = [
-  "email" => $config['credenciais']['email'],
-  "token" => $config['credenciais']['token']
+  "email" => $config['email'],
+  "token" => $config['token']
 ];
 
-$curl = curl_init($url);
+$url_pagseguro = "https://ws.sandbox.pagseguro.uol.com.br/v2/sessions";
+
+$curl = curl_init($url_pagseguro);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($credenciais));
@@ -48,11 +51,11 @@ $session = simplexml_load_string($resultado)->id;
           <form action="">
             <p>
               <label for="">Seu nome</label>
-              <input type="text">
+              <input type="text" value="João Comprador">
             </p>
             <p>
               <label for="">E-mail</label>
-              <input type="email">
+              <input type="email" value="c54962368416735731500@sandbox.pagseguro.com.br">
             </p>
             <p>
               <label for="">Valor</label>
@@ -72,5 +75,9 @@ $session = simplexml_load_string($resultado)->id;
       </ul>
     </footer>
   </main>
+
+<script src="https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="assets/js/pagseguro.js"></script>
 </body>
 </html>
